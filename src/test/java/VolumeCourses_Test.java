@@ -1,15 +1,15 @@
+import data.cources.CourseDataMenu;
 import exceptions.DriverNotSupportedException;
+import factory.DriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import data.cources.CourseDataMenu;
-import factory.DriverFactory;
 import pages.MainPage;
 
 public class VolumeCourses_Test {
 
-    private WebDriver driver=null;
+    private WebDriver driver = null;
 
     @BeforeEach
     public void init() throws DriverNotSupportedException {
@@ -18,19 +18,19 @@ public class VolumeCourses_Test {
     }
 
     @AfterEach
-    public  void close(){
-        if(driver!=null){
+    public void close() {
+        if (driver != null) {
             driver.quit();
         }
     }
+
     @Test
-    public void volumeCourses(){
-        MainPage mainPage=new MainPage(driver);
+    public void volumeCourses() {
+        MainPage mainPage = new MainPage(driver);
         mainPage.open();
         mainPage
-            .clickCoursesCatrgoriesMenu(CourseDataMenu.TESTING)
-            .pageHeaderMatch("Каталог")
-            .numbersOfCourses(10);
+                .clickCoursesCatrgoriesMenu(CourseDataMenu.TESTING)
+                .pageHeaderMatch("Каталог")
+                .numbersOfCourses(10);
     }
-    
 }

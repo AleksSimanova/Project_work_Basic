@@ -3,10 +3,12 @@ package data;
 public enum MainMenuItemsData {
     COURSES("Курсы");
     private String name;
-    MainMenuItemsData (String name){
-        this.name=name;
+
+    MainMenuItemsData(String name) {
+        this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 }

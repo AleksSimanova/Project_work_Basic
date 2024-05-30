@@ -1,6 +1,6 @@
 package factory;
 
-public enum BrouserNameData {
+public enum BrowserNameData {
     CHROME,
     FIREFOX,
     SAFARI
